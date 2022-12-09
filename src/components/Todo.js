@@ -22,6 +22,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   }
 
   return todos.map((todo, index) => (
+    
     <div
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
       key={index}
@@ -29,6 +30,13 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>
+      <span>{todo.date.toLocaleDateString('en-GB', {
+                 day: 'numeric',
+                 month: 'short',
+                 hour:'numeric',
+                 minute:'numeric',
+                 hour12: true,
+              })}</span>
       <div className='icons'>
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}
