@@ -8,6 +8,7 @@
 body {
   background-image: url("C:\Users\anasa\Desktop\Studies\react\react-todo-app-v1-master\public\dominik-schroder-FIKD9t5_5zQ-unsplash.jpg");
   background-size: 100%;
+  background-size:cover ;
 
   }
 .todo-app {
@@ -176,4 +177,23 @@ h1 {
 
 .edit-icon {
   color: #fff;
+}
+
+@media screen and (max-width:375px) {
+  .todo-app{
+  width: 300px;
+  };
+}
+
+@media screen and (max-width:375px) {
+  .todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #000000;
+    outline: none;
+    width: 220px;
+    background: transparent;
+    margin-bottom:15px ;
+    color: rgb(0, 0, 0);
+  }
 }
